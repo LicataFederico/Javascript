@@ -1,4 +1,10 @@
-let divProductos = document.getElementById('divProductos')
+let divProductos = document.getElementById('divProductos');
+let botonFinalizarCompra = document.getElementById("botonFinalizarCompra")
+const contenedorCarrito = document.getElementById('contenedor-carrito');
+const contadorCarrito = document.getElementById('contadorCarrito');
+const precioTotal = document.getElementById('precioTotal');
+const alertaFinalizar = document.getElementById('alertaFinalizar');
+
 
 fetch('stock.json')
     .then(promise => promise.json())

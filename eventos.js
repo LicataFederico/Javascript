@@ -1,7 +1,4 @@
-const contenedorCarrito = document.getElementById('contenedor-carrito');
-const contadorCarrito = document.getElementById('contadorCarrito');
-const precioTotal = document.getElementById('precioTotal');
-const alertaFinalizar = document.getElementById('alertaFinalizar');
+
 
 function mostrarCarrito() {
     contenedorCarrito.innerHTML = '';
@@ -37,28 +34,29 @@ function mostrarCarrito() {
 
             }
         })
-        // modal finalizarCompra
-        let botonFinalizarCompra = document.getElementById(`finalizarCompra`)
 
-        botonFinalizarCompra.addEventListener('click', () => {
-            alertaFinalizar.innerHTML = `
-
-            <h1 class="card-title">Thanks for buying in Pandora Store!</h1>
-            <p>Total:$</p>
-
-            `
-            alertaFinalizar.appendChild()
-        })
     })
 }
+
 // funcion acumuladora para mostrar precio final dentro del modal
 function actualizarCarrito() {
     precioTotal.innerText = arrayCarrito.reduce((acc, el) => acc + (el.precio * el.cantidad), 0)
     contadorCarrito.innerText = arrayCarrito.reduce((acc, el) => acc + el.cantidad, 0);
 }
 
+// modal finalizarCompra
 
 
+botonFinalizarCompra.addEventListener('click', () => {
+    console.log("click")
+    document.getElementById('alertaFinalizar').innerHTML = `
+
+    <h1 class="card-title">Thanks for buying in Pandora Store!</h1>
+    <p>Total:$</p>
+
+    `
+
+})
 
 
 
