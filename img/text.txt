@@ -1,0 +1,3 @@
+La cantidad esta bien manejada para mostrar los precios pero hay problemas para la funcionalidad de Eliminar
+Dentro del codigo vi que usas la funcion filter para iterar, deberias usar forEach, el filter es una funcion que filtra los resultados pasandole una callback con la condicion.
+Tambien en la funcionalidad de agregar el carrito, no estas agregando un valor con la cantidad y estas buscando la informacion en la variable data, pero deberia ser en la variable arrayProductos.

@@ -1,0 +1,307 @@
+* {
+  font-family: 'Yaldevi', sans-serif;
+  font-weight: bold;
+  text-decoration: none;
+  list-style: none;
+  margin: 0px;
+  box-sizing: border-box; }
+
+@import url("https://fonts.googleapis.com/css2?family=Yaldevi&display=swap");
+.fotosIndex img:hover {
+  transition-duration: 0.5s;
+  cursor: default;
+  color: #b4243c;
+  background-color: #b4243c;
+  box-shadow: 0 0 10px #b4243c;
+  transform: scale(1.04, 1.04);
+  z-index: 9;
+  border-color: #b4243c; }
+
+.gal-item {
+  overflow: hidden;
+  padding: 8px; }
+
+.gal-item .box {
+  height: 100%;
+  overflow: hidden; }
+
+.box img {
+  height: 100%;
+  width: auto;
+  object-fit: cover; }
+
+@media only screen and (max-width: 321px) {
+  .listaMid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding-right: 20px;
+    margin: 2rem; } }
+
+@media only screen and (max-width: 375px) {
+  .logo {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: start;
+    margin: 0.6rem; }
+  header div a img {
+    height: 35px; }
+  #her {
+    font-size: 22px;
+    text-align: center; }
+  .listaMid {
+    margin: 3rem; }
+  h1 {
+    font-size: 22px; } }
+
+@media only screen and (max-width: 640px) {
+  #footerMediaQ {
+    display: none; }
+  #her {
+    font-size: 22px;
+    text-align: center; }
+  .titulo {
+    font-size: 25px; }
+  .cartSize {
+    font-size: 12px;
+    margin-top: 7px; }
+  .navbar {
+    display: block;
+    visibility: visible; }
+  .bottom-left {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: start;
+    margin: 5px;
+    margin: 0.2rem; }
+  .botonResponsive {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center; }
+  .hide {
+    display: none; }
+  .centrado {
+    text-align: center; }
+  .table {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; }
+  .pt-5 {
+    padding-top: 1rem !important; }
+  .fotosIndex img {
+    height: 85%; }
+  .table {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; }
+  div a img {
+    height: 50px; }
+  h1 {
+    font-size: 22px; } }
+  
+
+@media (max-width: 767px) {
+  .navbar-toggle {
+    border: none;
+    outline: none; } }
+
+@media screen and (min-width: 641px) {
+  .boostNav {
+    display: none;
+    visibility: hidden; } }
+
+#helpH1 {
+  margin: 3rem; }
+
+
+
+.iframe-rwd {
+  position: relative;
+  padding-bottom: 65.25%;
+  padding-top: 30px;
+  height: 0;
+  overflow: hidden; }
+
+.iframe-rwd iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%; }
+
+  .card {
+    border: none;
+  }
+
+.full-width {
+  width: 100%;
+  margin-top: 4rem; }
+
+.carousel .carousel-item {
+  max-height: 550px; }
+
+.carousel-item img {
+  object-fit: cover;
+  max-height: 550px; }
+
+.listaMid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  padding-right: 15px;
+  margin: 2rem; }
+
+footer {
+  text-decoration: none;
+  word-spacing: 0.5 rem;
+  background-color: black;
+  color: white;
+  margin-top: 3rem;
+  padding: auto; }
+
+footer a {
+  text-decoration: none;
+  color: white; }
+
+.navFoot {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly; }
+
+.titulo {
+  font-size: 3rem; }
+
+.navbar-toggler:focus {
+  outline: none; }
+
+nav {
+  display: flex;
+  justify-content: left; }
+
+.navbar-light .navbar-toggler {
+  border-color: white;
+  outline: white; }
+  .navbar-light .navbar-toggler:focus {
+    outline: none;
+    border-color: white;
+    outline: white; }
+
+section ul li {
+  display: inline;
+  right: 0%;
+  color: black; }
+
+.navBarraIconos {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: right;
+  padding: 0%;
+  list-style: none;
+  color: black;
+  background-color: black; }
+
+.listaMenu {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  list-style: none;
+  color: black;
+  text-decoration: none; }
+
+/*npm run watch-css  */
+
+.navbar.navbar-default, .navbar button.navbar-toggle {
+  border: none; }
+
+.galeriaMain {
+  row-gap: 70px; }
+
+.bottom-left {
+  margin: 0.5rem; }
+
+.fotosIndex img {
+  justify-content: space-around;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-content: center;
+  width: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  align-items: center;
+  height: 90%;
+  transition: all 0.5s ease-out;
+  position: relative;
+  z-index: 2; }
+
+a{
+  color: black;
+}  
+
+ul li a {
+  text-decoration: none; }
+
+a:hover {
+  color: #b4243c; }
+
+.form {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  margin: 0px;
+  list-style: none; }
+
+main section div {
+  margin: auto; }
+
+a.btn {
+  color: white;
+  -webkit-appearance: button;
+  -moz-appearance: button;
+  appearance: button;
+  border: solid #b4243c;
+  background-color: #b4243c; }
+
+.cookiesCenter {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 1rem;
+  text-align: center !important; }
+
+
+
+.card-modal{
+  display: flex;
+  text-align: center;
+  align-items: center;
+  justify-content: space-around;
+  margin-top: 12px;
+}
+
+body {
+    background-color: white;
+    color: black;
+    transition: background-color 700ms ease;
+}
+
+
+
+.nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+.btn-primary {
+  color:white ;
+  background-color:#b4243c ;
+  border-color: black;
+}
+.btn-primary:hover{
+  background-color:#FFEEAD;
+  color: black;
+  
+}
