@@ -1,4 +1,4 @@
-
+/// Se agrega el modal de boostrap del carrito al contenedor,especificamente al card-body con el id "contenedorCarrito"
 function mostrarCarrito() {
     contenedorCarrito.innerHTML = '';
     arrayCarrito.forEach(element => {
@@ -15,7 +15,7 @@ function mostrarCarrito() {
         contenedorCarrito.appendChild(div)
 
         let botonEliminar = document.getElementById(`eliminar${element.id}`)
-
+        /// funcionalidad  el boton eliminar,si la cantidad en el carrito es mayor a 1,si se elimina se elimina de a uno
         botonEliminar.addEventListener('click', () => {
             if (element.cantidad > 1) {
                 element.cantidad = element.cantidad - 1
@@ -44,9 +44,7 @@ function actualizarCarrito() {
 }
 
 
-
-
-// modal finalizarCompra
+// boton finalizarCompra
 botonFinalizarCompra.addEventListener('click', () => {
     console.log("click")
     document.getElementById('alertaFinalizar').innerHTML = `
@@ -54,9 +52,15 @@ botonFinalizarCompra.addEventListener('click', () => {
     
     `
 })
-
-
-
+// funcion para vaciar el carrito una vez finalizada la compra
+function clearArray() {
+    contenedorCarrito.innerHTML = '';
+    while (arrayCarrito.length > 0) {
+        arrayCarrito.pop();
+    }
+    actualizarCarrito()
+    return arrayCarrito;
+}
 
 
 
