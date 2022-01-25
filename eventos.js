@@ -15,7 +15,7 @@ function mostrarCarrito() {
         contenedorCarrito.appendChild(div)
 
         let botonEliminar = document.getElementById(`eliminar${element.id}`)
-        /// funcionalidad  el boton eliminar,si la cantidad en el carrito es mayor a 1,si se elimina se elimina de a uno
+        /// funcionalidad del boton eliminar y se agrega la cantidad
         botonEliminar.addEventListener('click', () => {
             if (element.cantidad > 1) {
                 element.cantidad = element.cantidad - 1
@@ -43,16 +43,33 @@ function actualizarCarrito() {
     contadorCarrito.innerText = arrayCarrito.reduce((acc, el) => acc + el.cantidad, 0);
 }
 
+/// boton filanizar compra comiteado en github
 
-// boton finalizarCompra
+// boton finalizarCompra   no em anda el if para confirmar que tiene mas elementos en el carrito.
+
 botonFinalizarCompra.addEventListener('click', () => {
     console.log("click")
+    if (arrayCarrito.length == 0) {
+        console.log("array vacio ingrese elementos |dentro del else if")
+        document.getElementById('alertaFinalizar').innerHTML = `
+        <h1 class="card-title" style="font-size: 18px;">Your cart is empty. Please select an item.</h1>
+        
+    
+        `
+
+        return;
+    }
+    console.log("click |dentro del if")
+    arrayCarrito.pop();
     document.getElementById('alertaFinalizar').innerHTML = `
     <h1 class="card-title" style="font-size: 18px;">Thanks for buying in Pandora Store!</h1>
     
     `
+    actualizarCarrito()
+    clearArray()
+
 })
-// funcion para vaciar el carrito una vez finalizada la compra
+
 function clearArray() {
     contenedorCarrito.innerHTML = '';
     while (arrayCarrito.length > 0) {
@@ -60,7 +77,5 @@ function clearArray() {
     }
     actualizarCarrito()
     return arrayCarrito;
+
 }
-
-
-

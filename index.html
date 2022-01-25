@@ -41,20 +41,19 @@
     <div class="modal-dialog">
       <div class="modal-content">
         <div class="modal-header">
-          <h5 class="modal-title" id="exampleModalLabel">Mi Carrito</h5>
+          <h5 class="modal-title" id="exampleModalLabel">My Cart</h5>
           <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
         </div>
         <div class="modal-body " id="contenedor-carrito">
-
         </div>
         <div class="modal-footer" style="text-align: center;">
           <p>Total:$ <span id="precioTotal"></span></p>
-          <!-- <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal"
-            id="botonFinalizarCompra">Finalizar compra</button> -->
-          <button onclick="clearArray()" type="button" class="btn btn-primary" data-bs-toggle="modal"
-            data-bs-target="#exampleModal2" id="botonFinalizarCompra">
-            Finalizar compra
+
+          <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal2"
+            id="botonFinalizarCompra">
+            Buy!
           </button>
+
         </div>
       </div>
     </div>
@@ -69,11 +68,14 @@
         <div class="modal-header">
 
           <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+
         </div>
         <div class="modal-body" id="alertaFinalizar">
-          ...
         </div>
         <div class="modal-footer">
+          <!-- <p style="font-size: 18px;">Total:$ <span id="precioTotal"></span></p> -->
+
+
           <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Continue
             Shopping!</button>
 
@@ -81,7 +83,23 @@
       </div>
     </div>
   </div>
-  <!--fin 2ndo Modal -->
+
+  <!--Toasts -->
+  <button type="button" class="btn btn-primary" id="liveToastBtn">Show live toast</button>
+
+  <div class="position-fixed bottom-0 end-0 p-3" style="z-index: 11">
+    <div id="liveToast" class="toast" role="alert" aria-live="assertive" aria-atomic="true">
+      <div class="toast-header">
+
+        <strong class="me-auto">Bootstrap</strong>
+        <small>11 mins ago</small>
+        <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+      </div>
+      <div class="toast-body">
+        Hello, world! This is a toast message.
+      </div>
+    </div>
+  </div>
 
 
   <!-- Footer -->

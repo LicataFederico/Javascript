@@ -16,7 +16,7 @@ fetch('stock.json')
             <div class="card-body ">
                 <h5>${element.nombre}</h5>
                 <p class="card-text" >$${element.precio}</p>
-                <button  class="btn btn-danger "  id="botonAgregar${element.id}"><i class="fas fa-cart-plus "></i></button>
+                <button  class="btn btn-primary "  id="botonAgregar${element.id}"><i class="fas fa-cart-plus "></i></button>
             </div>
         </div>
         `
@@ -26,7 +26,6 @@ fetch('stock.json')
                 if (arrayCarrito.find(elemento => elemento.id == element.id)) {
                     let index = arrayCarrito.findIndex(elemento => elemento.id == element.id)
                     if (arrayCarrito[index].cantidad < element.stock) {
-
                     }
                     arrayCarrito[index].cantidad++;
                     localStorage.setItem('carrito', JSON.stringify(arrayCarrito))
@@ -36,6 +35,7 @@ fetch('stock.json')
                 } else {
                     let producto = new Producto(element.id, element.nombre, element.color, element.precio, element.stock)
                     arrayCarrito.push(producto)
+                    console.log(arrayCarrito)
                     mostrarCarrito()
                     actualizarCarrito()
                     localStorage.setItem('carrito', JSON.stringify(arrayCarrito))
@@ -43,3 +43,14 @@ fetch('stock.json')
             })
         })
     })
+
+
+// let toastTrigger = document.getElementById(`botonAgregar${element.id}`)
+// let toastLiveExample = document.getElementById('liveToast')
+// if (toastTrigger) {
+//     toastTrigger.addEventListener('click', function () {
+//         var toast = new bootstrap.Toast(toastLiveExample)
+
+//         toast.show()
+//     })
+// }
