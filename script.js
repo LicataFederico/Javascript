@@ -6,6 +6,7 @@ const precioTotal = document.getElementById('precioTotal');
 const alertaFinalizar = document.getElementById('alertaFinalizar');
 
 
+
 fetch('stock.json')
     .then(promise => promise.json())
     .then(data => {
@@ -16,14 +17,20 @@ fetch('stock.json')
             <div class="card-body ">
                 <h5>${element.nombre}</h5>
                 <p class="card-text" >$${element.precio}</p>
-                <button  class="btn btn-primary "  id="botonAgregar${element.id}"><i class="fas fa-cart-plus "></i></button>
+                <button  class="btn btn-primary  botonAgregar${element.id}"  id="botonAgregar${element.id}"><i class="fas fa-cart-plus "></i></button>
             </div>
         </div>
         `
+
         });
+
+
         data.forEach(element => {
+
             document.getElementById(`botonAgregar${element.id}`).addEventListener('click', () => {
+
                 if (arrayCarrito.find(elemento => elemento.id == element.id)) {
+                    mostrarToast()
                     let index = arrayCarrito.findIndex(elemento => elemento.id == element.id)
                     if (arrayCarrito[index].cantidad < element.stock) {
                     }
@@ -32,25 +39,34 @@ fetch('stock.json')
                     mostrarCarrito()
                     actualizarCarrito()
 
+
                 } else {
+
                     let producto = new Producto(element.id, element.nombre, element.color, element.precio, element.stock)
                     arrayCarrito.push(producto)
-                    console.log(arrayCarrito)
                     mostrarCarrito()
                     actualizarCarrito()
+
+
                     localStorage.setItem('carrito', JSON.stringify(arrayCarrito))
                 }
+
             })
         })
     })
 
+function mostrarToast() {
+    arrayCarrito.forEach(element => {
+        let toastTrigger = document.getElementById(`botonAgregar${element.id}`)
+        let toastLiveExample = document.getElementById('liveToast')
+        if (toastTrigger) {
+            console.log()
+            toastTrigger.addEventListener('click', function () {
 
-// let toastTrigger = document.getElementById(`botonAgregar${element.id}`)
-// let toastLiveExample = document.getElementById('liveToast')
-// if (toastTrigger) {
-//     toastTrigger.addEventListener('click', function () {
-//         var toast = new bootstrap.Toast(toastLiveExample)
-
-//         toast.show()
-//     })
-// }
+                var toast = new bootstrap.Toast(toastLiveExample)
+                toast.show()
+                console.log("click en toast activado")
+            })
+        }
+    })
+}

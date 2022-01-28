@@ -15,7 +15,7 @@ function mostrarCarrito() {
         contenedorCarrito.appendChild(div)
 
         let botonEliminar = document.getElementById(`eliminar${element.id}`)
-        /// funcionalidad del boton eliminar y se agrega la cantidad
+        /// funcionalidad del boton eliminar : siempre y cuando haya mas de un elemento en arrayCarrito,se podra eliminar de uno en uno),de lo contrario se vaciara el array.
         botonEliminar.addEventListener('click', () => {
             if (element.cantidad > 1) {
                 element.cantidad = element.cantidad - 1
@@ -28,14 +28,10 @@ function mostrarCarrito() {
                 arrayCarrito = arrayCarrito.filter(prodE => prodE.id != element.id)
                 localStorage.setItem('carrito', JSON.stringify(arrayCarrito))
                 actualizarCarrito()
-
             }
         })
-
     })
 }
-
-
 
 // funcion acumuladora para mostrar precio final dentro del modal
 function actualizarCarrito() {
@@ -43,31 +39,18 @@ function actualizarCarrito() {
     contadorCarrito.innerText = arrayCarrito.reduce((acc, el) => acc + el.cantidad, 0);
 }
 
-/// boton filanizar compra comiteado en github
-
 // boton finalizarCompra   no em anda el if para confirmar que tiene mas elementos en el carrito.
-
 botonFinalizarCompra.addEventListener('click', () => {
-    console.log("click")
     if (arrayCarrito.length == 0) {
-        console.log("array vacio ingrese elementos |dentro del else if")
         document.getElementById('alertaFinalizar').innerHTML = `
-        <h1 class="card-title" style="font-size: 18px;">Your cart is empty. Please select an item.</h1>
-        
-    
-        `
-
+        <h1 class="card-title" style="font-size: 18px;">Your cart is empty. Please select an item.</h1>`
         return;
     }
-    console.log("click |dentro del if")
     arrayCarrito.pop();
     document.getElementById('alertaFinalizar').innerHTML = `
     <h1 class="card-title" style="font-size: 18px;">Thanks for buying in Pandora Store!</h1>
-    
     `
-    actualizarCarrito()
     clearArray()
-
 })
 
 function clearArray() {
@@ -77,5 +60,4 @@ function clearArray() {
     }
     actualizarCarrito()
     return arrayCarrito;
-
 }
