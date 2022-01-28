@@ -4,6 +4,7 @@ const contenedorCarrito = document.getElementById('contenedor-carrito');
 const contadorCarrito = document.getElementById('contadorCarrito');
 const precioTotal = document.getElementById('precioTotal');
 const alertaFinalizar = document.getElementById('alertaFinalizar');
+const toastLiveExample = document.getElementById("liveToast")
 
 
 
@@ -21,52 +22,34 @@ fetch('stock.json')
             </div>
         </div>
         `
-
         });
 
-
         data.forEach(element => {
-
             document.getElementById(`botonAgregar${element.id}`).addEventListener('click', () => {
-
                 if (arrayCarrito.find(elemento => elemento.id == element.id)) {
-                    mostrarToast()
                     let index = arrayCarrito.findIndex(elemento => elemento.id == element.id)
                     if (arrayCarrito[index].cantidad < element.stock) {
                     }
                     arrayCarrito[index].cantidad++;
-                    localStorage.setItem('carrito', JSON.stringify(arrayCarrito))
-                    mostrarCarrito()
-                    actualizarCarrito()
-
 
                 } else {
-
                     let producto = new Producto(element.id, element.nombre, element.color, element.precio, element.stock)
                     arrayCarrito.push(producto)
-                    mostrarCarrito()
-                    actualizarCarrito()
-
-
-                    localStorage.setItem('carrito', JSON.stringify(arrayCarrito))
                 }
-
+                mostrarToast()
+                mostrarCarrito()
+                actualizarCarrito()
+                localStorage.setItem('carrito', JSON.stringify(arrayCarrito))
             })
         })
     })
 
 function mostrarToast() {
-    arrayCarrito.forEach(element => {
-        let toastTrigger = document.getElementById(`botonAgregar${element.id}`)
-        let toastLiveExample = document.getElementById('liveToast')
-        if (toastTrigger) {
-            console.log()
-            toastTrigger.addEventListener('click', function () {
-
-                var toast = new bootstrap.Toast(toastLiveExample)
-                toast.show()
-                console.log("click en toast activado")
-            })
-        }
+    var toast = new bootstrap.Toast(toastLiveExample, {
+        animation: true,
+        autohide: true,
+        delay: 1500
     })
+    toast.show()
+    console.log("click en toast activado")
 }

@@ -4,7 +4,9 @@
   text-decoration: none;
   list-style: none;
   margin: 0px;
-  box-sizing: border-box; }
+  box-sizing: border-box; 
+  
+}
 
 @import url("https://fonts.googleapis.com/css2?family=Yaldevi&display=swap");
 .fotosIndex img:hover {
@@ -215,7 +217,8 @@ section ul li {
   border: none; }
 
 .galeriaMain {
-  row-gap: 70px; }
+  row-gap: 70px;
+}
 
 .bottom-left {
   margin: 0.5rem; }
@@ -304,4 +307,8 @@ body {
   background-color:#FFEEAD;
   color: black;
   
+}
+.row{
+    --bs-gutter-x: 0; 
+    --bs-gutter-y: 0;
 }
