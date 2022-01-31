@@ -312,3 +312,18 @@ body {
     --bs-gutter-x: 0; 
     --bs-gutter-y: 0;
 }
+
+.toast-header{
+  background-color:indigo;
+}
+.carouselImagenes{
+  margin-bottom: 2rem;
+}
+.botonCarrito {
+  margin-bottom: 1rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  
+  
+}
