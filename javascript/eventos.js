@@ -8,7 +8,7 @@ function mostrarCarrito() {
             <img src="./img/img${element.id}.jpg" width='50px'>
             <h5 class="card-title">${element.nombre}</h5>
             <p id="cantidad${element.id}">cantidad: ${element.cantidad}</p>
-            <p class="card-text">$${element.precio}</p>
+            <p class="card-text">x          $${element.precio}</p>
             <button id="eliminar${element.id}" class="boton-eliminar"><i class="fas fa-trash-alt"></i></button>
         </div>
         `
