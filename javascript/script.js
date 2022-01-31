@@ -1,7 +1,6 @@
 // //////////////////////variables//////////////////////
 
 let divProductos = document.getElementById('divProductos');
-let botonEliminar = document.getElementById(`eliminar${element.id}`)
 let botonFinalizarCompra = document.getElementById("botonFinalizarCompra")
 const contenedorCarrito = document.getElementById('contenedor-carrito');
 const contadorCarrito = document.getElementById('contadorCarrito');
