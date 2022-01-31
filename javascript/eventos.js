@@ -1,4 +1,4 @@
-/// Se agrega el modal de boostrap del carrito al contenedor,especificamente al card-body con el id "contenedorCarrito"
+/// Se agrega el modal de boostrap del carrito al contenedor,especificamente al card-body con el id "contenedorCarrito",en este se visualizaran las distinas propiedades pertenecientes a la clase Productos
 function mostrarCarrito() {
     contenedorCarrito.innerHTML = '';
     arrayCarrito.forEach(element => {
@@ -53,6 +53,7 @@ botonFinalizarCompra.addEventListener('click', () => {
     clearArray()
 })
 
+// funcion para borrar los elementos del array,se que hay metodos mas rapidos que recorrer el array borrando de uno con .pop, pero no logre hacerlo andar mas que con este metodo
 function clearArray() {
     contenedorCarrito.innerHTML = '';
     while (arrayCarrito.length > 0) {

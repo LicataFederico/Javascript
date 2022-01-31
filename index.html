@@ -2,13 +2,10 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Ecomerce JavaScript</title>
-  <link rel="icon" type="image/x-icon" href="favicon.ico">
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
   <!-- descripcion - keywords -->
   <meta name="desciption"
     content="Pandora, vanguardia en tendencias de moda. Ropa ,accesorios ,carteras , zapatos .Lo ultimo en tendencia en las principales capitales del mundo y en redes sociales">
@@ -24,7 +21,7 @@
     content="https://images.pexels.com/photos/2235071/pexels-photo-2235071.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" />
   <meta property="og:image"
     content="https://images.pexels.com/photos/2235071/pexels-photo-2235071.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" />
-  <meta property="og:title " content="PANDORA | FASHION DESIGNS.LO ULTIMO EN TENDENCIA">
+
   <meta property="og:desciption "
     content="Pandora, vanguardia en tendencias de moda. Ropa ,accesorios ,carteras , zapatos .Lo ultimo en tendencia en las principales capitales del mundo y en redes sociales">
   <meta property="og:image " content="https://www.pexels.com/photo/fashion-people-woman-art-7948616/">
@@ -37,23 +34,17 @@
 </head>
 
 <body>
-
-
+  <!-- corregir nombres de fotos,rebvisar consignas -->
 
   <header>
 
     <!--  Logo y carrito -->
-
-
     <div class="d-flex justify-content-between botonCarrito">
       <a title="Pandora.com" class="logo  " href="./index.html"><img src="./img/logopng.png"
           alt="Logo de la maca pandora" height="75"></a>
       <button id="contadorCarrito" type="button" class="btn btn-primary " data-bs-toggle="modal"
         data-bs-target="#exampleModal"><i class="fas fa-shopping-cart"></i></button>
     </div>
-
-
-
 
     <!--  nav bar moobile -->
     <nav class="navbar navbar-expand-lg navbar-light bg-white boostNav">
@@ -101,16 +92,15 @@
           </ul>
         </div>
       </div>
+    </nav>
   </header>
 
-  <h1 id="her" style="text-align: center;margin-bottom: 0,5rem;">
-    BY HER*FOR HER
-  </h1>
+
 
   <!--  nav bar 1080 -->
   <div class="row hide">
     <div class="col">
-      <ul class="listaMenu " style="padding: auto;">
+      <ul class="listaMenu ">
         <li><a href="./index.html">Home</a></li>
         <li><a href="./pages/login.html"> LogIn</a></li>
         <li><a href="./pages/help.html">Help</a></li>
@@ -118,6 +108,12 @@
       </ul>
     </div>
   </div>
+
+
+  <h1 id="her" id="helpH1" style="text-align: center;margin-bottom:0.5rem;">
+    BY HER*FOR HER
+  </h1>
+
 
   <!-- carrousel de imagenes -->
   <main>
@@ -154,9 +150,8 @@
     </div>
   </main>
 
-
   <!--  TENDENCIAS -->
-  <H2 class="hide" style="text-align: center;margin-top: 2rem;">TENDENCIAS</H2>
+  <H2 class="hide" style="text-align: center;margin-top: 2rem;">TRENDS</H2>
   <ul class="listaMenu listaMid">
     <li><a href="https://www.instagram.com/stories/highlights/17871949270639534/" target="_blank">Spring</a>
     </li>
@@ -169,7 +164,6 @@
   <!-- Button trigger modal -->
   <div class="row d-flex justify-content-evenly fotosIndex galeriaMain" id="divProductos">
   </div>
-
 
   <!-- Modal -->
   <div class="modal fade " id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">

@@ -2,13 +2,10 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ecomerce JavaScript</title>
-    <link rel="icon" type="image/x-icon" href="favicon.ico">
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
     <!-- descripcion - keywords -->
     <meta name="desciption"
         content="Pandora, vanguardia en tendencias de moda. Ropa ,accesorios ,carteras , zapatos .Lo ultimo en tendencia en las principales capitales del mundo y en redes sociales">
@@ -36,15 +33,18 @@
     <link rel="stylesheet" href="/sass.css">
 </head>
 
-<body class="container-fluid">
+<body>
+
+    <!-- corregir nombres de fotos,rebvisar consignas -->
+
     <header>
-        <!-- header -->
-        <div class="row ">
-            <div class="col-8 logoCenter">
-                <a title="Pandora.com" class="logo hide" href="../index.html"><img src="../img/logopng.png"
-                        alt="Logo de la maca pandora" height="75"></a>
-            </div>
+
+        <!--Logo-->
+        <div class="d-flex justify-content-between botonCarrito">
+            <a title="Pandora.com" class="logo  " href="../index.html"><img src="../img/logopng.png"
+                    alt="Logo de la maca pandora" height="75"></a>
         </div>
+
         <!-- boostrap navbar -->
         <nav class="navbar navbar-expand-lg navbar-light bg-white boostNav">
             <div class="container-fluid">
@@ -109,9 +109,13 @@
             </ul>
         </div>
     </div>
+
+
+    <!-- title -->
+    <H1 id="helpH1" style="text-align: center;">CONTACT US</H1>
+
+
     <main>
-        <!-- title -->
-        <H1 style="text-align: center;">CONTACT US</H1>
         <div class="container-fluid">
             <div class="row">
                 <div class="col">
@@ -172,13 +176,12 @@
     <footer class="page-footer font-small mdb-color pt-4">
         <div class="container text-center text-md-left">
             <div class="row text-center text-md-left mt-3 pb-3">
-                <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mt-3 hide">
+                <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mt-3 ">
                     <h6 class="text-uppercase mb-4 font-weight-bold ">Site Navigation</h6>
                     <p><a href="../index.html">Home</a></p>
-                    <p><a href="../pages/gallery.html">Store</a></p>
                     <p><a href="../pages/login.html"> LogIn</a></p>
-                    <p><a href="../pages/help.html"> Help</a></p>
-                    <p><a href="../pages/jewelry.html">Jewelry</a></p>
+                    <p><a href="../pages/contact.html">Contact Us</a></p>
+                    <p><a href="../pages/help.html">Help</a></p>
                 </div>
                 <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mt-3 hide">
                     <h6 class="text-uppercase mb-4 font-weight-bold">LEGAL</h6>
@@ -205,10 +208,8 @@
                 </div>
                 <div class="col-md-7 col-lg-8  boostNav navFoot">
                     <a href="../index.html"><strong>Home</strong></a>
-                    <a href="../pages/gallery.html"><strong>Store</strong></a>
                     <a href="../pages/contact.html"><strong>Contact Us</strong></a>
                     <a href="../pages/help.html"><strong>Help</strong></a>
-                    <a href="../pages/jewelry.html"><strong>Jewelry</strong></a>
                     <a href="../pages/login.html"><strong>Log In</strong></a>
                 </div>
             </div>

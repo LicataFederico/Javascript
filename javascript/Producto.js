@@ -1,3 +1,5 @@
+
+// se crea la clase Producto y indica que si no existe un 'carrito' en el localStorage se cree uno
 class Producto {
     constructor(id, nombre, color, precio, stock, cantidad, img) {
         this.id = id;

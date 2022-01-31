@@ -1,3 +1,4 @@
+// //////////////////////variables//////////////////////
 let divProductos = document.getElementById('divProductos');
 let botonFinalizarCompra = document.getElementById("botonFinalizarCompra")
 const contenedorCarrito = document.getElementById('contenedor-carrito');
@@ -7,7 +8,7 @@ const alertaFinalizar = document.getElementById('alertaFinalizar');
 const toastLiveExample = document.getElementById("liveToast")
 
 
-
+// insertan cards de boostrap al DOM.se asignan las propiedades y se crea un boton para cada card.Los valores se importan de archivo json,el cual sirve de stock
 fetch('stock.json')
     .then(promise => promise.json())
     .then(data => {
@@ -23,7 +24,7 @@ fetch('stock.json')
         </div>
         `
         });
-
+        //////////////////////funcionalidad de cada boton para agregar al carrito//////////////////////
         data.forEach(element => {
             document.getElementById(`botonAgregar${element.id}`).addEventListener('click', () => {
                 if (arrayCarrito.find(elemento => elemento.id == element.id)) {
@@ -44,6 +45,7 @@ fetch('stock.json')
         })
     })
 
+// //////////////////////funcion que muestra un toast de boostrap con un mensaje al agregar productos al carrito//////////////////////
 function mostrarToast() {
     var toast = new bootstrap.Toast(toastLiveExample, {
         animation: true,
