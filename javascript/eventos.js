@@ -14,6 +14,7 @@ function mostrarCarrito() {
         `
         contenedorCarrito.appendChild(div)
 
+        /// esta variable no pude ponerla en el script con el resto porque sino no se rompia el codigo
         let botonEliminar = document.getElementById(`eliminar${element.id}`)
         /// funcionalidad del boton eliminar : siempre y cuando haya mas de un elemento en arrayCarrito,se podra eliminar de uno en uno),de lo contrario se vaciara el array.
         botonEliminar.addEventListener('click', () => {
